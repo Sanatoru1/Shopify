@@ -1,0 +1,72 @@
+@import "../scss-utils/variables";
+@import "../scss-utils/mixins";
+
+.hero {
+	margin-top: 20rem;
+	.hero__content {
+		display: flex;
+		.hero__left {
+			h1 {
+				@include text($font-size-xxxl, 80.6px, inherit, 700);
+			}
+			p {
+				@include text($font-size-m, 28.8px, $clr-white-shade, inherit);
+				max-width: 46.126rem;
+				margin: $padding-small + 0.465rem 0 $padding-regular + 0.908rem 0;
+			}
+			.hero-form {
+				input {
+					width: 48.565rem;
+					height: 6.894rem;
+					@include text($font-size-s, 2.34rem, $clr-white, inherit);
+					border-radius: $radius-ssmall;
+					border: 0.1rem solid $clr-white-shade-2;
+					padding: $padding-xsmall + 0.316rem 0 $padding-xsmall + 0.278rem
+						$padding-medium + 1.4rem;
+					//* иконка почты и ее позиционирование
+					background-image: url("../../img/icons/email.svg");
+					background-repeat: no-repeat;
+					background-size: auto;
+					background-position: 2rem 1.7rem;
+					//*
+					&::placeholder {
+						@include text($font-size-s, 2.34rem, $clr-white-shade-2, 500);
+					}
+				}
+				a {
+					position: absolute;
+					left: 69.3rem;
+					top: 62.7rem;
+				}
+			}
+			.hero-list {
+				display: flex;
+				margin-top: $margin-small + 0.512rem;
+				.hero-item {
+					@include flex-row;
+					margin-right: $margin-regular + 0.838rem;
+					a {
+						@include text($font-size-s, 2.52rem, inherit, inherit);
+						letter-spacing: 7.5%;
+					}
+					i {
+						margin-right: $margin-xxsmall + 0.459rem;
+						font-size: $font-size-l + 1rem;
+						color: $clr-protective-blue;
+						background-color: $clr-white;
+						border-radius: 120%;
+					}
+				}
+			}
+		}
+		.hero__right {
+			.blue-block {
+				width: 50rem;
+				height: 60rem;
+				background-color: $clr-protective-blue;
+				border-radius: $radius-ssmall;
+				transform: rotate(-12deg);
+			}
+		}
+	}
+}

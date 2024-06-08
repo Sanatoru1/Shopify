@@ -1,0 +1,35 @@
+@import "../scss-utils/variables";
+@import "../scss-utils/mixins";
+
+
+.social-icons {
+	@include flex-row;
+	.social-item {
+		i {
+			margin: 1rem;
+			font-size: 2rem;
+			color: $clr-white;
+			@include text-hover;
+		}
+	}
+	&:nth-child(1) {
+		&:hover {
+			color: #ff006e;
+		}
+	}
+	&:nth-child(2) {
+		&:hover {
+			color: #000;
+		}
+	}
+	&:nth-child(3) {
+		&:hover {
+			color: #3a86ff;
+		}
+	}
+	&:nth-child(4) {
+		&:hover {
+			color: blue;
+		}
+	}
+}

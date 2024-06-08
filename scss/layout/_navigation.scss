@@ -1,0 +1,42 @@
+@import "../scss-utils/variables";
+@import "../scss-utils/mixins";
+
+.navigation__content {
+	.nav {
+		margin-top: 3%;
+		@include flex-row;
+		.nav-list {
+			@include flex-row;
+			width: 40rem;
+			.nav-item {
+				margin-right: 4rem;
+				a {
+					@include text-hover;
+					color: $clr-white;
+					font-size: 1.6rem;
+					line-height: 180%; /* 28.8px */
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.navigation__content {
+		.nav {
+            .nav-list{
+                display: none;
+            }
+            .mob-menu{
+                ul{
+                    position: absolute;
+                    z-index: 5;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+		}
+	}
+}

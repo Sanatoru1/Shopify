@@ -1,0 +1,85 @@
+@mixin respond-to($media) {
+	@if $media== "phone" {
+		@media (max-width: 363px) {
+			@content;
+		}
+	} @else if $media== "tablet" {
+		@media (max-width: 768px) {
+			@content;
+		}
+	} @else if $media== "laptop" {
+		@media (max-width: 1024px) {
+			@content;
+		}
+	}
+}
+
+@mixin click() {
+	position: relative;
+	top: 0.1rem;
+}
+
+@mixin flex-row($justify: space-between, $align: center) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin flex-column-reverse() {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+@mixin flex-row-center() {
+	display: flex;
+	align-items: center;
+}
+
+@mixin flex-column() {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin flex-column-center() {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+//* старые миксины
+
+@mixin text-hover {
+	&:hover {
+		color: darken($clr-white, 65%);
+		transition: $transition-fast;
+		// text-decoration: underline;
+	}
+}
+
+@mixin btn-hover {
+	&:hover {
+		background-color: darken($clr-primary-yellow, 35%);
+		color: lighten($clr-white, 40%);
+	}
+}
+@mixin btn-hover-drk {
+	&:hover {
+		border-color: $clr-white;
+		background-color: darken($clr-primary-yellow, 35%);
+		color: lighten($clr-white, 40%);
+	}
+}
+
+// // nb - none background
+// @mixin btn-nb-hover {
+// 	&:hover {
+// 		transition: $transition-;
+// 	}
+// }
+
+@mixin text($fz, $lh, $clr, $fw) {
+	font-size: $fz;
+	line-height: $lh;
+	color: $clr;
+	font-weight: $fw;
+}

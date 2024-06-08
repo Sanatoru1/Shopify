@@ -1,0 +1,77 @@
+@import "../scss-utils/variables";
+@import "../scss-utils/mixins";
+
+.about {
+	margin: $margin-large + 4rem 0;
+	.about__content {
+		@include flex-row;
+		.about__left {
+			max-width: 53.318rem;
+			h2 {
+				@include text($font-size-xxl, 62.4px, inherit, 700);
+			}
+			p {
+				margin-top: $margin-small + 0.465rem;
+				max-width: 46.126rem;
+				@include text($font-size-m, 28.8px, $clr-white-shade, inherit);
+			}
+		}
+		.about__right {
+			margin-left: $margin-large - 1rem;
+			.about-block__wrapper {
+				@include flex-row-center;
+				flex-wrap: wrap;
+				.about-block {
+					@include flex-column;
+					width: 26.75rem;
+					height: 23.944rem;
+					border-radius: $radius-xsmall;
+					padding: $padding-xsmall $padding-xsmall;
+					.about-block__icon {
+						width: 4.4rem;
+						height: 4.4rem;
+						padding: 3rem;
+						background-repeat: no-repeat;
+						background-position: center;
+						border-radius: $radius-xsmall;
+					}
+					h3 {
+						margin: $margin-small + 0.12rem 0 $margin-xsmall 0;
+						@include text($font-size-l, 2.6rem, inherit, 700);
+					}
+					p {
+						@include text($font-size-s, 2.52rem, $clr-white-shade, inherit);
+					}
+					&:hover {
+						transition: $transition-fast;
+						background-color: #1a1a3d;
+					}
+					&:nth-child(1) {
+						.about-block__icon {
+							background-image: url("../../img/icons/yellow stonks.svg");
+							background-color: $clr-primary-shade;
+						}
+					}
+					&:nth-child(2) {
+						.about-block__icon {
+							background-image: url("../../img/icons/blue name tag.svg");
+							background-color: $clr-signal-blue;
+						}
+					}
+					&:nth-child(3) {
+						.about-block__icon {
+							background-image: url("../../img/icons/red document.svg");
+							background-color: $clr-deep-purple;
+						}
+					}
+					&:nth-child(4) {
+						.about-block__icon {
+							background-image: url("../../img/icons/orange conversion.svg");
+							background-color: $clr-orange-shade;
+						}
+					}
+				}
+			}
+		}
+	}
+}

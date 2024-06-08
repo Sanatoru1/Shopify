@@ -1,0 +1,38 @@
+@import "../scss-utils/variables";
+@import "../scss-utils/mixins";
+
+.contact {
+	.contact__content {
+		text-align: center;
+		@include flex-column-center;
+		h2 {
+			@include text($font-size-xxl, 62.4px, inherit, 700);
+		}
+		p {
+			@include text($font-size-m, 28.8px, $clr-white-shade, inherit);
+		}
+		.contact_form {
+			.contact_input {
+				position: relative;
+				width: 485.65px;
+				height: 68.94px;
+				border: 0.1rem solid $clr-white-shade-2;
+				@include text($font-size-ss, 23.4px, $clr-white, inherit);
+				border-radius: $radius-ssmall;
+				padding: $padding-xsmall 0 $padding-xsmall $padding-small;
+				&::placeholder {
+					@include text($font-size-ss, 23.4px, $clr-white, inherit);
+				}
+			}
+			.btn {
+				position: absolute;
+				right: 70.5rem;
+				bottom: -326.2rem;
+				width: 12.603rem;
+				padding: $padding-xxsmall + 0.5rem 0 0 0;
+				height: 50.61px;
+				font-size: $font-size-m;
+			}
+		}
+	}
+}

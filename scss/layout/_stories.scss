@@ -1,0 +1,67 @@
+@import "../scss-utils/variables";
+@import "../scss-utils/mixins";
+
+.stories {
+	.stories__content {
+		@include flex-row;
+		.stories__left {
+			img {
+				position: absolute;
+				z-index: 2;
+				bottom: -217.2rem;
+			}
+			.blue_block {
+				width: 544.63px;
+				height: 660.91px;
+				border-radius: $radius-xsmall + 0.5rem;
+				position: relative;
+				background-color: $clr-protective-blue;
+			}
+			.total-block {
+				position: absolute;
+				z-index: 3;
+				bottom: -226rem;
+				left: 25rem;
+				width: 21.039rem;
+				height: 24.164rem;
+				border-radius: $radius-xsmall;
+				background-color: $clr-white;
+				background-image: url("../../img/images/total sales.png");
+				background-repeat: no-repeat;
+				align-items: center;
+				background-position: center;
+			}
+		}
+		.stories__right {
+			max-width: 55rem;
+			h2 {
+				@include text($font-size-xxl, 62.4px, inherit, 700);
+				// max-width: 533.18px;
+				margin-bottom: 9.182rem;
+			}
+			.stories-list {
+				.stories-item {
+					margin-top: 4.813rem;
+					position: relative;
+					display: flex;
+					.stories-item__substring {
+						h3 {
+							@include text($font-size-l, 2.6rem, inherit, 700);
+							// padding: 0 0 21.74px 26.52px;
+							padding: 0 0 21.74px 0;
+						}
+						p {
+							@include text($font-size-s, 2.52rem, $clr-white-shade, inherit);
+							max-width: 319.94px;
+						}
+
+						i {
+							margin-right: 26.52px;
+							@include text(3rem, inherit, $clr-protective-blue, inherit);
+						}
+					}
+				}
+			}
+		}
+	}
+}

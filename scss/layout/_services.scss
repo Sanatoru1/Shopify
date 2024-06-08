@@ -1,0 +1,44 @@
+@import "../scss-utils/variables";
+@import "../scss-utils/mixins";
+
+.services {
+	.services__content {
+		@include flex-row;
+		.services__left {
+			background-image: url("../../img/images/service primary_pic.png");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			width: 72.435rem;
+			height: 81.944rem;
+		}
+		.services__right {
+			h2 {
+				max-width: 53.318rem;
+				@include text($font-size-xxl, 62.4px, inherit, 700);
+				margin-bottom: $margin-medium + 1.69rem;
+			}
+			.statistic-blocks__holder {
+				@include flex-row;
+				.statistic-block {
+					h3 {
+						@include text($font-size-x, 4.94rem, $clr-primary-yellow, 700);
+					}
+					p {
+						@include text($font-size-s, 2.52rem, $clr-white-shade, inherit);
+						// max-width: 203.34px;
+						max-width: 20.5rem;
+						margin-top: 1.345rem;
+					}
+					&:last-child {
+						h3 {
+							color: $clr-signal-orange;
+						}
+						padding-left: 4.867rem;
+						border-left: 0.2rem solid $clr-white-shade-2;
+					}
+				}
+			}
+		}
+	}
+}
